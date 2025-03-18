@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🦷 Smartooth AI 🦷
 
 ## ✨ Sobre
@@ -151,3 +152,6 @@ dependencies {
 <br>
 
   
+=======
+# Sprint3-Java-Cloud
+>>>>>>> 0a3ee5e3cf2ecba3ccc0a0ba0d316bf5bfb9549b
