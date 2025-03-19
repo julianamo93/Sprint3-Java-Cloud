@@ -5,15 +5,12 @@ plugins {
 }
 
 group = 'com.smartooth'
-version = '0.1.0'
+version = '0.0.1'
 sourceCompatibility = '17'
 
 repositories {
 	mavenCentral()
 }
-
-group = 'com.example'
-version = '0.1.0-SNAPSHOT'
 
 java {
 	toolchain {
@@ -27,30 +24,31 @@ configurations {
 	}
 }
 
-repositories {
-	mavenCentral()
-}
-
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
 	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
 
 	// Dependências para JWT
 	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
 	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
 	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// Documentação com OpenAPI
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
 
-	implementation 'com.microsoft.sqlserver:mssql-jdbc:9.4.1.jre11'  // ou a versão mais recente
-	// outras dependências...
-
+	// Conexão com SQL Server
+	implementation 'com.microsoft.sqlserver:mssql-jdbc:9.4.1.jre11'
 }
 
 tasks.named('test') {
@@ -58,6 +56,5 @@ tasks.named('test') {
 }
 
 jar {
-	archiveFileName = 'SmartoothAI-0.1.0.jar'
-	destinationDirectory = file("$build/libs")
+	archiveFileName = 'SmartoothAI-0.0.1.jar'
 }
