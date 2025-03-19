@@ -6,18 +6,18 @@ plugins {
 
 group = 'com.smartooth'
 version = '0.1.0'
-sourceCompatibility = '17' // ou a versão que você está utilizando (ex: '11' ou '17')
+sourceCompatibility = '17'
 
 repositories {
 	mavenCentral()
 }
 
 group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+version = '0.1.0-SNAPSHOT'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
+		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
 
@@ -48,12 +48,16 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
 
-	implementation 'com.microsoft.sqlserver:mssql-jdbc:10.2.0.jre8'  // ou a versão mais recente
+	implementation 'com.microsoft.sqlserver:mssql-jdbc:9.4.1.jre11'  // ou a versão mais recente
 	// outras dependências...
-
 
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+jar {
+	archiveFileName = 'SmartoothAI-0.1.0.jar'
+	destinationDirectory = file("$build/libs")
 }
