@@ -4,7 +4,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.6'
 }
 
-group = 'com.smartooth'
+group = 'com.smartooth'  // Verifique se está correto
 version = '0.0.1'
 sourceCompatibility = '17'
 
@@ -14,7 +14,7 @@ repositories {
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion = JavaLanguageVersion.of(17)  // Ajustado para Java 17
 	}
 }
 
@@ -23,12 +23,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-
-	runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
 
 	// Dependências para JWT
 	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
@@ -48,11 +45,13 @@ dependencies {
 // Configuração para gerar o arquivo JAR
 bootJar {
 	archiveFileName = 'SmartoothAI-0.0.1.jar'
-	mainClass = 'com.example.SmartoothAI.SmartoothAiApplication'
+	mainClass = 'com.smartooth.SmartoothAiApplication'  // Corrigir para o pacote correto
+}
+
+springBoot {
+	mainClass = 'com.smartooth.SmartoothAiApplication'  // Corrigir para o pacote correto
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
-
-
