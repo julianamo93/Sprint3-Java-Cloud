@@ -1,5 +1,9 @@
-<<<<<<< HEAD
 # 🦷 Smartooth AI 🦷
+
+![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
 
 ## ✨ Sobre
 
@@ -10,19 +14,27 @@ Neste repositório encontra-se a API responsável pelo gerenciamento de profissi
 
 ## 🪐 Developers 
 
-- [Sabrina Couto](https://github.com/sabrinacouto) 
-- [Juliana Mo.](https://github.com/julianamo93) 
-- [Kevin Nobre](https://github.com/KevinNobre) 
+- [Sabrina Couto](https://github.com/sabrinacouto) - Backend Developer - RM552728 - 2TDSZ
+- [Juliana Mo.](https://github.com/julianamo93) - Modelagem de Dados e Cloud - RM554113 -2TDSPR
+- [Kevin Nobre](https://github.com/KevinNobre) - Backend e Front - RM552590 - 2TDSZ
+  
 
 ## Modelo DER
-
-![diagramJavaSprint](https://media.discordapp.net/attachments/1273452588343230546/1292880955614167121/Relational_1_1.png?ex=670558b8&is=67040738&hm=b032a4f4354a2ddcde398b3c55f869d3814a1c46a8eaf709091387e722bae0e1&=&format=webp&quality=lossless&width=1101&height=662)
-
+![Captura de tela 2025-03-20 011231](https://github.com/user-attachments/assets/36285977-ae30-4380-9130-78dac38aca5b)
 
 
 ## Diagrama de Classes
 
-![diagramJavaSprint](https://media.discordapp.net/attachments/1273452588343230546/1292880903823036548/Diagrama_de_Classe.jpg?ex=670558ac&is=6704072c&hm=0033ffce8f3e9ce27f89ce91280b08b58eb2710eb085e659c3b2ca564497fe1f&=&format=webp&width=1112&height=662)
+![Captura de tela 2025-03-19 231027](https://github.com/user-attachments/assets/3a23b5c3-2b11-4f0e-ae2b-79eaebf75e56)
+
+## Arquitetura da Solução
+
+[Smartooth-Archi.pdf](https://github.com/user-attachments/files/19358853/Smartooth-Archi.pdf)
+
+## Vídeo da Solução
+
+https://youtu.be/2XcoVLipeoc
+
 
 ## 💬 Rodando localmente
 
@@ -61,69 +73,31 @@ as requisições das rotas com a URL:
 ```endpoint
    http://localhost:8080/
 ```
-## 📌 Endpoints para RecomendacaoTrat
+## 📌 Endpoints para o UsuarioPaciente
 
-### GET - Retorna todas as recomendações
-GET http://localhost:8080/recomendacoes
-
-### GET - Retorna uma recomendação por ID
-GET http://localhost:8080/recomendacoes/{id}
-
-### POST - Cria uma nova recomendação
-POST http://localhost:8080/recomendacoes 
-
-### PUT - Edita uma recomendação existente
-PUT http://localhost:8080/recomendacoes/{id} 
-
-### DELETE - Deleta uma recomendação existente
-DELETE http://localhost:8080/recomendacoes/{id}
-
-## 📌 Endpoints para a entidade Plano
-
-### GET - Retorna todos os planos
-GET http://localhost:8080/planos
-
-### GET - Retorna um plano por ID
-GET http://localhost:8080/planos/{id}
-
-### POST - Cria um novo plano
-POST http://localhost:8080/planos 
-
-### PUT - Atualiza um plano existente
-PUT http://localhost:8080/planos/{id} 
-
-### DELETE - Deleta um plano existente
-DELETE http://localhost:8080/planos/{id}
+| Método  | Endpoint                           | Descrição |
+|---------|------------------------------------|-----------|
+| `POST`  | `/usuario/cadastro`               | Processa o cadastro de um novo usuário. |
+| `GET`   | `/usuario/editarUsuario/{id}`     | Exibe os dados do formulário de edição do usuário. |
+| `PATCH` | `/usuario/editarUsuario/{id}`     | Atualiza os dados do usuário. |
+| `DELETE`| `/usuario/deletarUsuario/{id}`    | Exclui um usuário do sistema. |
+| `GET`   | `/usuario/logout`                 | Encerra a sessão do usuário logado. |
 
 
-## 📌 Endpoints para Profissional
-
-### GET - Retorna um profissional por ID
-GET http://localhost:8080/profissional/{id}
-
-### POST - Cria um novo profissional
-POST http://localhost:8080/profissional
-
-### PUT - Atualiza um profissional existente
-PUT http://localhost:8080/profissional/{id} 
-
-### DELETE - Deleta um profissional existente
-DELETE http://localhost:8080/profissional/{id}
+## 📌 Endpoints para o Plano
 
 
-## 📌 Endpoints para UsuarioPaciente
+| Método  | Endpoint                | Descrição |
+|---------|-------------------------|-----------|
+| `POST`  | `/planos/cadastro`      | Processa o cadastro de um novo plano. |
+| `GET`   | `/planos/{id}/editar`   | Exibe o formulário de edição do plano. |
+| `PUT`   | `/planos/{id}/editar`   | Atualiza os dados de um plano. |
+| `DELETE`| `/planos/{id}/excluir`  | Exclui um plano do sistema. |
 
-### GET - Retorna um paciente por ID
-GET http://localhost:8080/usuarios/{id}
 
-### POST - Cria um novo Pacinete
-POST http://localhost:8080/usuarios
-
-### PUT - Atualiza um Paciente existente
-PUT http://localhost:8080/usuarios/{id} 
-
-### DELETE - Deleta um Paciente existente
-DELETE http://localhost:8080/usuarios/{id}
+## 👩‍💻 Exemplo de teste
+ 
+![CadastroLoginJava](https://github.com/user-attachments/assets/3a49ad66-68d5-4904-8a0c-b4ef54c418b1)
 
 
 ## 📍 Dependências
@@ -139,19 +113,3 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 ```
-
-## 🔮 Tecnologias utilizadas
-
-<br> <div align="center"> 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="70" height="70">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg" width="70" height="70"/> 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="70" height="70" /> 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-plain-wordmark.svg" width="70" height="70" />
-<br> 
-</div> 
-<br>
-
-  
-=======
-# Sprint3-Java-Cloud
->>>>>>> 0a3ee5e3cf2ecba3ccc0a0ba0d316bf5bfb9549b
