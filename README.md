@@ -1,6 +1,6 @@
 # 🦷 Smartooth AI 🦷
 
-## API Java SpringBoot com gradle utilizada para deploy no webapp da Azure com banco de dados Azure SQL
+### API Java SpringBoot com gradle utilizada para deploy no webapp da Azure com banco de dados Azure SQL
 
 ![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
